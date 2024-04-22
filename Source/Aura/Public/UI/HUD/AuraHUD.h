@@ -31,6 +31,7 @@ protected:
 	//virtual void BeginPlay()  override;
 private:
 
+	// Widget class
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<UAuraUserWidget> OverlayWidgetClass;
 

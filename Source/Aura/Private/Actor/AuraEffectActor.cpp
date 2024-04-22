@@ -20,6 +20,7 @@ void AAuraEffectActor::BeginPlay()
 
 void AAuraEffectActor::ApplyEffectToTarget(AActor* TargetActor, TSubclassOf<UGameplayEffect> GameplayEffectClass)
 {
+
 	// Method 1
 //IAbilitySystemInterface* ASCInterface = Cast<IAbilitySystemInterface>(Target);
 //if (ASCInterface)
@@ -47,6 +48,8 @@ void AAuraEffectActor::ApplyEffectToTarget(AActor* TargetActor, TSubclassOf<UGam
 
 void AAuraEffectActor::OnOverlap(AActor* TargetActor)
 {
+	// Interface를 통해 Attribute 접근-> Attribute에 있는 set health 혹은 다른거 조정해서 수치 조정 가능했음
+	// 
 	if (InstantEffectApplicationPolicy == EEffectApplicationPolicy::ApplyOnOverlap)
 	{
 		ApplyEffectToTarget(TargetActor, InstantGameplayEffectClass);

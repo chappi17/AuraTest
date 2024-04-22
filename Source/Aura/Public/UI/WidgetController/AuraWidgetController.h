@@ -10,6 +10,8 @@
 class UAuraAttributeSet;
 class UAttributeSet;
 
+// 구조체 형태로 컨트롤러, 스테이트, 어빌리티시스템,어트리뷰트 연결하기 쉽도록 만들기
+// UI에 영향주는 매개변수들 모은거임.
 USTRUCT(BlueprintType)
 struct FWidgetControllerParams
 {
@@ -38,7 +40,8 @@ UCLASS()
 class AURA_API UAuraWidgetController : public UObject
 {
 	GENERATED_BODY()
-
+// Widget Controller 는 위젯과 데이터를 연결해주는 백엔드라고 생각하면 될듯
+// 데이터와 위젯을 연결하는게 중요할듯
 public:
 	UFUNCTION(BlueprintCallable)
 	void SetWidgetControllerParams(const FWidgetControllerParams& WCParams);

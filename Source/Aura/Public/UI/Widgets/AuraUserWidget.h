@@ -18,6 +18,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetWidgetController(UObject* InWIdgetController);
 
+	// 위젯에서 컨트롤러로 정보를 줘야하기 때문에 필요
 	UPROPERTY(BlueprintReadOnly)
 	TObjectPtr<UObject> WidgetController;
 

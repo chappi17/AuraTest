@@ -9,6 +9,7 @@
 
 UAuraAttributeSet::UAuraAttributeSet()
 {
+	// Attribute Access매크로를 통해서 생겨난 Init.
 	InitHealth(50.f);
 	InitMaxHealth(100.f);
 	InitMana(50.f);
