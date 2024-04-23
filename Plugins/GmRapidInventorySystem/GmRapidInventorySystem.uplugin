@@ -1,0 +1,64 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.1.1",
+	"FriendlyName": "GmRapidInventorySystem",
+	"Description": "A highly optimized, continuously upgraded, modular inventory system.",
+	"Category": "Inventory",
+	"CreatedBy": "DevGaeMyo",
+	"CreatedByURL": "",
+	"DocsURL": "https://zheldgksekfck.tistory.com/240",
+	"MarketplaceURL": "com.epicgames.launcher:\n//ue/marketplace/product/2118ba3c25504d05a767616da079e88b",
+	"SupportURL": "https://discord.gg/hCRDBkcNGt",
+	"EngineVersion": "5.2.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "GmRapidInventorySystem",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "GameplayMsgRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "GameplayMsgNodes",
+			"Type": "UncookedOnly",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "CommonUI",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayTagsEditor",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
+			"Name": "ModularGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		}
+	]
+}
