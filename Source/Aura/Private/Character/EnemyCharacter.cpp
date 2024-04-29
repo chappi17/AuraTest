@@ -10,7 +10,7 @@ AEnemyCharacter::AEnemyCharacter()
 	GetMesh()->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
 
 	// GAS 컴포넌트 생성하고 레플리케이션 세팅 해줘야함
-	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>("AbilitySystemComponent");
+	AbilitySystemComponent = CreateDefaultSubobject<UAuraAbilitySystemComponent>("AbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);
 	// AI는 주로 Minimal mode로 접근해야함. 
 	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
@@ -22,7 +22,13 @@ AEnemyCharacter::AEnemyCharacter()
 void AEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	InitAbilityActorInfo();
+}
+
+void AEnemyCharacter::InitAbilityActorInfo()
+{
 	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+	Cast<UAuraAbilitySystemComponent>(AbilitySystemComponent)->AbilityActorInfoSet();
 }
 
 void AEnemyCharacter::HighlightActor()

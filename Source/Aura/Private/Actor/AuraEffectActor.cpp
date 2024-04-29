@@ -1,6 +1,7 @@
 // Copyright WhNi
 #include "Actor/AuraEffectActor.h"
 #include "AbilitySystemComponent.h"
+#include "AbilitySystem/AuraAbilitySystemComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
 #include "GameplayEffect.h"
 

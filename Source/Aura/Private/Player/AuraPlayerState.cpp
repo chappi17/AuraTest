@@ -7,7 +7,7 @@
 AAuraPlayerState::AAuraPlayerState()
 {
 
-	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>("AbilitySystemComponent");
+	AbilitySystemComponent = CreateDefaultSubobject<UAuraAbilitySystemComponent>("AuraAbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);
 	// Mixed, Minimal, Full -> 
 	// Full -> 객체의 모든 속성이 서버에서 모든 클라이언트로 복제 (싱글 플레이 게임)
