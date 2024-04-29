@@ -22,6 +22,10 @@ public:
 	// SetPlayerState 세팅
 	virtual void OnRep_PlayerState() override;
 	// 액터에 대한 초기화 하는 함수
+
+	virtual int32 GetPlayerLevel() override;
+
+
 private:
 	virtual void InitAbilityActorInfo() override;
 
