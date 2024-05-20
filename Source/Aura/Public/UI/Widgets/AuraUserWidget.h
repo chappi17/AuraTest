@@ -23,7 +23,7 @@ public:
 	TObjectPtr<UObject> WidgetController;
 
 protected:
-	// 블루프린트에서 내용을 재정의할 수 있게 하는 키워드
+	//In blueprint, editor can Implementation Event
 	UFUNCTION(BlueprintImplementableEvent)
 	void  WidgetControllerSet();
 	

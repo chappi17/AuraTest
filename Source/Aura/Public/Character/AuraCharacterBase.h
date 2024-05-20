@@ -9,6 +9,7 @@
 #include "AuraCharacterBase.generated.h"
 
 class UGameplayEffect;
+class UGameplayAbility;
 
 UCLASS(Abstract)
 //인터페이스 클래스는 AbilitySystemComponent 의 getter를 가지고 있음 ( 순수 가상함수 형태로)
@@ -48,6 +49,13 @@ protected:
 
 	void ApplyEffectToSelf(TSubclassOf<UGameplayEffect> GameplayEffectClass, float level) const ;
 	void InitilizeDefaultAttributes() const;
+
+	void AddCharacterAbilities();
+
+private:
+
+	UPROPERTY(EditAnywhere, Category = "Abilities")
+	TArray<TSubclassOf<UGameplayAbility>> StartupAbilities;
 
 
 };

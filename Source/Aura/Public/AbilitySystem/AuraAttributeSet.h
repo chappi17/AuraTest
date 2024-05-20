@@ -13,6 +13,11 @@
  GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
  GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 
+
+typedef 	TBaseStaticDelegateInstance<FGameplayAttribute(), FDefaultDelegateUserPolicy>::FFuncPtr AttributeFuncPtr;
+
+//DECLARE_DELEGATE_RetVal(FGameplayAttribute, FAttributeSignature);
+
 USTRUCT()
 struct FEffectProperties
 {
@@ -56,12 +61,12 @@ public:
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 	//virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
-
 	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
+
+	TMap<FGameplayTag, 	AttributeFuncPtr> TagsToAttributes;
 
 
 	// Primary Attributes
-
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_Strength, Category = "Primary Attributes")
 	FGameplayAttributeData Strength;
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, Strength)

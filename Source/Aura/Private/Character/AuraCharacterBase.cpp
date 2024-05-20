@@ -49,4 +49,11 @@ void AAuraCharacterBase::InitilizeDefaultAttributes() const
 
 }
 
+void AAuraCharacterBase::AddCharacterAbilities()
+{
+	if (!HasAuthority()) return;
+
+
+}
+
  
