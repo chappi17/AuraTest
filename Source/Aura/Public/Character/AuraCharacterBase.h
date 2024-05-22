@@ -50,10 +50,12 @@ protected:
 	void ApplyEffectToSelf(TSubclassOf<UGameplayEffect> GameplayEffectClass, float level) const ;
 	void InitilizeDefaultAttributes() const;
 
+	// Ability 추가하기
 	void AddCharacterAbilities();
 
 private:
 
+	// GameplayAbility 가져오는 배열
 	UPROPERTY(EditAnywhere, Category = "Abilities")
 	TArray<TSubclassOf<UGameplayAbility>> StartupAbilities;
 

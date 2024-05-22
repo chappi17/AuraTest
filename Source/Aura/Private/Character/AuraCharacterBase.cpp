@@ -3,6 +3,7 @@
 
 #include "Character/AuraCharacterBase.h"
 #include "AbilitySystemComponent.h"
+#include "AbilitySystem/AuraAbilitySystemComponent.h"
 
 AAuraCharacterBase::AAuraCharacterBase()
 {
@@ -51,7 +52,11 @@ void AAuraCharacterBase::InitilizeDefaultAttributes() const
 
 void AAuraCharacterBase::AddCharacterAbilities()
 {
+	UAuraAbilitySystemComponent* AuraASC = CastChecked<UAuraAbilitySystemComponent>(AbilitySystemComponent);
+	// 권한 있는지 파악하기 -> HasAuthority 면 서버 / 아니면 클라
 	if (!HasAuthority()) return;
+
+	AuraASC->AddCharacterAbilities(StartupAbilities);
 
 
 }

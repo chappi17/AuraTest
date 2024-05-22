@@ -24,6 +24,7 @@ void AAuraCharacter::PossessedBy(AController* NewController)
 	Super::PossessedBy(NewController);
 	// Init ability actor info for server
 	InitAbilityActorInfo();
+	AddCharacterAbilities();
 }
 
 // 반드시 소유권을 가진 이후에 초기화 되어야 함.
